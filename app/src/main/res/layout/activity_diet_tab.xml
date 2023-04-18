@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:background="@drawable/home"
+    tools:context=".dietTab">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/breakFASTtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breakfast"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/breakfastFab"
+        android:scrollbars="vertical" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/breakfastFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"
+
+
+        android:background="@color/white"
+        android:src="@drawable/baseline_add_24"
+        app:maxImageSize="40dp">
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+
+    <TextView
+        android:id="@+id/lunchTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lunch"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/recyclerView1"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/lunchFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/lunchTab"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="-29dp"
+
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:src="@drawable/baseline_add_24"
+        app:maxImageSize="40dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerView1"
+        android:layout_marginTop="67dp"
+        android:scrollbars="vertical"
+
+        />
+
+    <TextView
+        android:id="@+id/lunchTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lunch"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/recyclerView1"
+        />
+
+    <TextView
+        android:id="@+id/dinnerTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dinner"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/recyclerView2"
+        />
+        <TextView
+            android:id="@+id/healthtipsTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health tips"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/totalCalorie"
+            />
+        <Button
+            android:id="@+id/buttonHealthtip"
+            android:layout_width="300dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Please give me Health tips"
+            android:layout_below="@+id/healthtipsTab"/>
+        <Button
+            android:id="@+id/backtoHOME"
+            android:layout_width="150dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="back to home"
+            android:layout_below="@+id/buttonHealthtip"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/dinnerFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/dinnerTab"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="-29dp"
+
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:src="@drawable/baseline_add_24"
+        app:maxImageSize="40dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerView2"
+        android:layout_marginTop="67dp"
+        android:scrollbars="vertical" />
+
+
+        <TextView
+            android:id="@+id/totalBreakfastCalorie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Breakfast Calories: "
+            android:textSize="18sp"
+            android:layout_below = "@+id/breakFASTtext"/>
+
+        <TextView
+            android:id="@+id/totalLunchCalorie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lunch Calories: "
+            android:textSize="18sp"
+            android:layout_below = "@+id/lunchTab"/>
+
+        <TextView
+            android:id="@+id/totalDinnerCalorie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dinner Calories: "
+            android:textSize="18sp"
+            android:layout_below = "@+id/dinnerTab"/>
+        <TextView
+            android:id="@+id/totalCalorie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Calories: "
+            android:textSize="18sp"
+            android:layout_below = "@+id/recyclerView3"
+             />
+
+
+    </RelativeLayout>
+</ScrollView>
