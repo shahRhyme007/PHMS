@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DialogMedicationAdd">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/medCard"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp">
+
+            <Spinner
+                android:id="@+id/medicationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="false"
+                android:layout_gravity="bottom"
+                android:contentDescription="Choose Medication"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/medTV"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:text="Medication Name"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/intervalCard"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="310dp">
+
+
+            <Spinner
+                android:id="@+id/intervalSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:contentDescription="Choose Intervals"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/intervalTV"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="top"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="Intervals"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/routeCard"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="210dp">
+
+            <Spinner
+                android:id="@+id/routeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:contentDescription="Choose Route"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/routeTV"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="top"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="Route"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dosageCard"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="110dp">
+
+            <Spinner
+                android:id="@+id/dosageSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:contentDescription="Choose Dosage"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/dosageTV"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="top"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="Dosage"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
