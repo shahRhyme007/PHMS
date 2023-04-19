@@ -1,3 +1,76 @@
 <resources>
     <string name="app_name">PHMS</string>
+
+    <string-array name="medication_names">
+        <item>"Acetaminophen"</item>
+        <item>"Strychnine"</item>
+        <item>"Cyanide"</item>
+        <item>"Lisinopril"</item>
+        <item>"Water"</item>
+        <item>"Ibuprofen"</item>
+        <item>"Omeprazole"</item>
+        <item>"Prednisone"</item>
+        <item>"Codeine"</item>
+    </string-array>
+
+    <string-array name="routes">
+        <item>"Oral"</item>
+        <item>"Oral"</item>
+        <item>"Oral"</item>
+        <item>"Oral"</item>
+        <item>"Oral"</item>
+        <item>"Oral"</item>
+        <item>"Oral"</item>
+        <item>"Oral"</item>
+        <item>"Oral"</item>
+    </string-array>
+
+    <string-array name="timings">
+        <item>"04/18/23 | 06:36 PM"</item>
+        <item>"04/18/23 | 06:36 PM"</item>
+        <item>"04/18/23 | 06:36 PM"</item>
+        <item>"04/18/23 | 06:36 PM"</item>
+        <item>"04/18/23 | 06:36 PM"</item>
+        <item>"04/18/23 | 06:36 PM"</item>
+        <item>"04/18/23 | 06:36 PM"</item>
+        <item>"04/18/23 | 06:36 PM"</item>
+        <item>"04/18/23 | 06:36 PM"</item>
+    </string-array>
+
+    <integer-array name="control">
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+        <item>1</item>
+    </integer-array>
+
+    <integer-array name="dosage">
+        <item>250</item>
+        <item>200</item>
+        <item>360</item>
+        <item>500</item>
+        <item>850</item>
+        <item>750</item>
+        <item>300</item>
+        <item>150</item>
+        <item>100</item>
+    </integer-array>
+
+    <integer-array name="intervals">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+
 </resources>

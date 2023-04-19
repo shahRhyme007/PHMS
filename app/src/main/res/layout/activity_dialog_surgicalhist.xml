@@ -8,11 +8,11 @@
     tools:context=".DialogSurgicalHist">
 
     <EditText
-        android:id="@+id/surgicalhistTBA"
+        android:id="@+id/surgicalHistTBA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="@string/enter_surgical_history"
+        android:hint="Enter Surgical History"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".TabMed">
+    tools:context=".TabMedication">
 
     <TextView
         android:id="@+id/medicationTitle"
         android:layout_width="319dp"
         android:layout_height="60dp"
         android:gravity="center"
-        android:text="@string/medication"
+        android:text="Medication"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:clickable="true"
-        android:contentDescription="@string/home"
+        android:contentDescription="Home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/medicationTitle"
@@ -51,7 +51,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="5dp"
-        android:text="@string/add"
+        android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -61,7 +61,7 @@
         android:layout_height="50dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="5dp"
-        android:text="@string/remove"
+        android:text="Remove"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -70,7 +70,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginBottom="5dp"
-        android:contentDescription="@string/search"
+        android:contentDescription="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/remove"
         app:layout_constraintHorizontal_bias="0.487"

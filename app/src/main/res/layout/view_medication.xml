@@ -38,7 +38,7 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="5dp"
-                android:text="@string/enter_medication"
+                android:text="Enter Medication"
                 android:textColor="@color/golden_yellow"
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
