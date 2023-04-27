@@ -36,6 +36,7 @@
 
     <ListView
         android:id="@+id/listVIEW"
+        android:background="@color/white"
         android:layout_width="384dp"
         android:layout_height="447dp"
         android:layout_marginStart="-40dp"

@@ -17,12 +17,12 @@ public class HealthArticle extends AppCompatActivity
 {
     private String[][] healthDetails =
             {
-                    {"Daily Tips", "", "", "", "Click More Details"},
-                    {"Summer Diet", "", "", "", "Click More Details"},
-                    {"Winter Diet", "", "", "", "Click More Details"},
-                    {"Spring food", "", "", "", "Click More Details"},
-                    {"Food for keeping you glowing", "", "", "", "Click More Details"},
-                    {"Four week diet", "", "", "", "Click More Details"}
+                    {"Daily Tips", "", "", "", "Click More Details", ""},
+                    {"Summer Diet", "", "", "", "Click More Details",""},
+                    {"Winter Diet", "", "", "", "Click More Details",""},
+                    {"Spring food", "", "", "", "Click More Details",""},
+                    {"Food for keeping you glowing", "", "", "", "Click More Details",""},
+                    {"Four week diet", "", "", "", "Click More Details",""}
             };
     private int[] images = {
             R.drawable.dailytip,
@@ -56,7 +56,7 @@ public class HealthArticle extends AppCompatActivity
         });
 
         list = new ArrayList();
-        for(int i = 0; i<healthDetails.length; i++)
+        for(int i = 0; i<(healthDetails.length); i++)
         {
             item = new HashMap<String, String>();
             item.put("line1", healthDetails[i][0]);
@@ -71,7 +71,7 @@ public class HealthArticle extends AppCompatActivity
         sa = new SimpleAdapter(this, list,
                 R.layout.multi_lines,
                 new String[] {"line1", "line2", "line3", "line4", "line5","line6"},
-                new int[] {R.id.line_a, R.id.line_b,R.id.line_c,R.id.line_d,R.id.line_e,R.id.line_f});
+                new int[] {R.id.line_a, R.id.line_b,R.id.line_d,R.id.line_e,R.id.line_f});
         lst.setAdapter(sa);
 
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {

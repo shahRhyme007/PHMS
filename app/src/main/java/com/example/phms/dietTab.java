@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,11 +39,12 @@ public class dietTab extends AppCompatActivity
     List<DataClass> dataList;
     List<DataClass> dataList2;
     List<DataClass> dataList3;
+    List<DataClass> dataList4;
 
     int totalCaloriesMorning = 0;
     int totalCaloriesLunch = 0 ;
     int totalCaloriesDinner = 0;
-    int totalCalories = 0 ;
+    int totalCaloriesForTheDay = 0 ;
 
 
     DatabaseReference databaseReference;
@@ -51,6 +53,9 @@ public class dietTab extends AppCompatActivity
     ValueEventListener valueEventListener;
     ValueEventListener valueEventListener2 ;
     ValueEventListener valueEventListener3;
+
+    ValueEventListener valueEventListener4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -93,6 +98,7 @@ public class dietTab extends AppCompatActivity
         dataList = new ArrayList<>();
         dataList2 = new ArrayList<>();
         dataList3 = new ArrayList<>();
+        dataList4 = new ArrayList<>();
 
         MyAdapterRecyclerView adapter = new MyAdapterRecyclerView(dietTab.this, dataList);
         recycleViewMorning.setAdapter(adapter);
@@ -126,6 +132,7 @@ public class dietTab extends AppCompatActivity
             {
 
                 dataList.clear();
+                totalCaloriesMorning = 0;
                 //dataList2.clear();
                 for(DataSnapshot itemsnapshot : snapshot.getChildren())
                 {
@@ -154,6 +161,7 @@ public class dietTab extends AppCompatActivity
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 dataList2.clear();
+                totalCaloriesLunch = 0;
                 for (DataSnapshot itemsnapshot : snapshot.getChildren()) {
                     DataClass dataClass2 = itemsnapshot.getValue(DataClass.class);
                     dataList2.add(dataClass2);
@@ -180,6 +188,7 @@ public class dietTab extends AppCompatActivity
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 dataList3.clear();
+                totalCaloriesDinner  = 0;
                 for (DataSnapshot itemsnapshot : snapshot.getChildren()) {
                     DataClass dataClass3 = itemsnapshot.getValue(DataClass.class);
                     dataList3.add(dataClass3);
@@ -200,9 +209,26 @@ public class dietTab extends AppCompatActivity
                 dialog3.dismiss();
             }
         });
-        totalCalories = totalCaloriesMorning + totalCaloriesLunch + totalCaloriesDinner;
-        TextView textViewTotalCal = findViewById(R.id.totalCalorie);
-        textViewTotalCal.setText("Total Calories you ate: " + totalCalories +" kcal");
+        valueEventListener4 = databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot)
+            {
+                for (DataSnapshot itemsnapshot : snapshot.getChildren()) {
+                    DataClass dataClass4 = itemsnapshot.getValue(DataClass.class);
+                    dataList4.add(dataClass4);
+                }
+
+                totalCaloriesForTheDay = totalCaloriesMorning + totalCaloriesLunch + totalCaloriesDinner;
+                TextView textViewTotalCal = findViewById(R.id.totalCalorie);
+                textViewTotalCal.setText("Total Calories you ate: " + totalCaloriesForTheDay +" kcal");
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
 
 
