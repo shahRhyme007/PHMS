@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newNote">
+    tools:context=".notedetails">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolBarOfCreateNote"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolBarOfnotedetails"
         android:background="@color/white">
-    <EditText
-        android:id="@+id/titleOfNote"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="12dp"
-        android:text="Title"
-        android:textSize="20dp"
-        />
+        <TextView
+            android:id="@+id/titleOfNotedetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="12dp"
+            android:text="Title displayed here"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
     </androidx.appcompat.widget.Toolbar>
 
-    <EditText
-        android:id="@+id/ContentOfNote"
+    <TextView
+        android:id="@+id/ContentOfNotedetails"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="15dp"
@@ -30,12 +30,12 @@
         android:gravity="top|left"
         android:textColor="@color/black"
         android:hint="Enter your note content here"
-        android:layout_below="@id/toolBarOfCreateNote"
+        android:layout_below="@id/toolBarOfnotedetails"
         android:padding="15dp">
-    </EditText>
+    </TextView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/saveNote"
+        android:id="@+id/gotoeditnote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -44,9 +44,10 @@
         android:layout_marginBottom="30dp"
         android:layout_marginRight="30dp"
 
-        android:src="@drawable/baseline_save_24"
+        android:src="@drawable/baseline_edit_24"
         android:background="@color/white"
         app:maxImageSize="50dp">
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 
 </RelativeLayout>
