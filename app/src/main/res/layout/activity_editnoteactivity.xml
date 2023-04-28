@@ -22,6 +22,19 @@
             android:textStyle="bold"/>
     </androidx.appcompat.widget.Toolbar>
 
+
+    <Button
+        android:id="@+id/goingtonotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
     <EditText
         android:id="@+id/editContentOfNote"
         android:layout_width="match_parent"
@@ -34,6 +47,8 @@
         android:layout_below="@id/toolBarOfeditnote"
         android:padding="15dp">
     </EditText>
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/saveeidtNote"

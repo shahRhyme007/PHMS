@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,6 +19,8 @@ public class editnoteactivity extends AppCompatActivity {
     EditText medittitleofnote, meditcontentofnote;
     FloatingActionButton msavededitnote;
 
+    Button gotoNotetab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +29,10 @@ public class editnoteactivity extends AppCompatActivity {
         medittitleofnote = findViewById(R.id.edittitleOfNote);
         meditcontentofnote = findViewById(R.id.editContentOfNote);
         msavededitnote = findViewById(R.id.saveeidtNote);
+        gotoNotetab = findViewById(R.id.goingtonotes);
         data= getIntent();
         Toolbar toolbar = findViewById(R.id.toolBarOfeditnote);
+
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -43,6 +48,14 @@ public class editnoteactivity extends AppCompatActivity {
         String notecontent= data.getStringExtra("content") ;
         meditcontentofnote.setText(notecontent);
         medittitleofnote.setText(notetitle);
+
+        gotoNotetab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(editnoteactivity.this, notesTab.class));
+            }
+        });
 
 
     }

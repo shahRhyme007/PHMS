@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 
@@ -16,6 +17,7 @@ public class notedetails extends AppCompatActivity {
 
     private TextView mtitleofnotedetails, mcontentofnotedetails;
      FloatingActionButton mgotoeditnote;
+     Button buttontonote;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,7 @@ public class notedetails extends AppCompatActivity {
         mtitleofnotedetails = findViewById(R.id.titleOfNotedetails);
         mcontentofnotedetails= findViewById(R.id.ContentOfNotedetails);
         mgotoeditnote = findViewById(R.id.gotoeditnote);
+        buttontonote = findViewById(R.id.backtoallnotes);
 
         Toolbar toolbar = findViewById(R.id.toolBarOfnotedetails);
         setSupportActionBar(toolbar);
@@ -42,6 +45,14 @@ public class notedetails extends AppCompatActivity {
                 intent.putExtra("noteId", data.getStringExtra("noteId"));
 
                 v.getContext().startActivity(intent);
+            }
+        });
+
+        buttontonote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(notedetails.this, notesTab.class)); 
             }
         });
 
