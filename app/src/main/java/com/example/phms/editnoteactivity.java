@@ -52,7 +52,7 @@ public class editnoteactivity extends AppCompatActivity {
 
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         msavededitnote.setOnClickListener(new View.OnClickListener() {
             @Override
