@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -41,6 +42,7 @@ public class notesTab extends AppCompatActivity
     FloatingActionButton mcreateNoteFab;
     private FirebaseAuth firebaseAuth;
 
+    Button gotoHomepage;
     RecyclerView mrecyclerView;
     StaggeredGridLayoutManager staggeredGridLayoutManager;
 
@@ -59,6 +61,7 @@ public class notesTab extends AppCompatActivity
 
         mcreateNoteFab = findViewById(R.id.createNoteFab);
         firebaseAuth = FirebaseAuth.getInstance();
+        gotoHomepage = findViewById(R.id.gotoMainHomeTab);
 
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -75,6 +78,8 @@ public class notesTab extends AppCompatActivity
 
             }
         });
+
+
 
         Query query = firebaseFirestore.collection("notes").document(firebaseUser.getUid()).collection("myNotes").orderBy("title",Query.Direction.ASCENDING);
 
@@ -109,6 +114,13 @@ public class notesTab extends AppCompatActivity
                     }
                 });
 
+                gotoHomepage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        startActivity(new Intent(notesTab.this, HomeMenu.class));
+                    }
+                });
 
                 popupbutton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -189,6 +201,8 @@ public class notesTab extends AppCompatActivity
             
         }
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
